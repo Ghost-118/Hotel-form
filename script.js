@@ -1,6 +1,7 @@
 document.querySelector('form').addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  // Extraer datos del formulario y armar el objeto
   const formData = new FormData(e.target);
   const choices = formData.getAll('choice');
 
@@ -16,6 +17,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   };
 
   try {
+    // Enviar información al servidor
     const response = await fetch('http://localhost:3000/api/feedback', {
       method: 'POST',
       headers: {
@@ -26,6 +28,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
 
     const data = await response.json();
 
+    // Procesar respuesta
     if (response.ok) {
       alert('¡Gracias! Tus datos se han guardado correctamente.');
       e.target.reset();
