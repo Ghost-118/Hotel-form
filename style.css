@@ -1,3 +1,4 @@
+/* Reseteo básico de estilos */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
+/* Fondo de pantalla y layout general */
 body {
   background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945");
   background-size: cover;
@@ -14,6 +16,7 @@ body {
   color: white;
 }
 
+/* Capa de superposición para oscurecer el fondo */
 body::before {
   content: "";
   position: fixed;
@@ -22,6 +25,7 @@ body::before {
   z-index: -1;
 }
 
+/* Encabezado */
 header {
   text-align: center;
   padding: 30px;
@@ -32,12 +36,14 @@ header h1 {
   margin-bottom: 10px;
 }
 
+/* Contenedor principal */
 main {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
 
+/* Estilos del formulario y tarjetas */
 form {
   width: 90%;
   max-width: 700px;
@@ -59,6 +65,7 @@ legend {
   padding: 0 10px;
 }
 
+/* Campos de entrada */
 label {
   display: block;
   margin-top: 12px;
@@ -81,6 +88,7 @@ input[type="checkbox"] {
   margin-right: 8px;
 }
 
+/* Botón de envío */
 button {
   width: 100%;
   padding: 15px;
