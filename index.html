@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
+    <!-- Encabezado del formulario -->
     <header>
       <h1>Hotel Feedback Form</h1>
       <p>
@@ -13,8 +15,11 @@
         stay.
       </p>
     </header>
+
     <main>
       <form method="POST" action="https://hotel-feedback.freecodecamp.org">
+
+        <!-- Datos personales -->
         <fieldset>
           <legend>Personal Information</legend>
           <label for="full-name">Name (required):</label>
@@ -33,6 +38,7 @@
           <input type="number" name="age" id="age" min="3" max="100" />
         </fieldset>
 
+        <!-- Historial de estancia -->
         <fieldset>
           <legend>Was this your first time at our hotel?</legend>
           <input id="yes-option" type="radio" name="hotel-stay" value="yes" />
@@ -41,6 +47,7 @@
           <label for="no-option">No</label>
         </fieldset>
 
+        <!-- Motivo de elección -->
         <fieldset>
           <legend>
             Why did you choose to stay at our hotel? (Check all that apply)
@@ -73,11 +80,11 @@
           <label for="price">Price</label>
         </fieldset>
 
+        <!-- Evaluaciones del servicio y comida -->
         <fieldset>
           <legend>Ratings</legend>
 
           <label for="service">How was the service?</label>
-
           <select name="service" id="service">
             <option value="poor">Poor</option>
             <option value="satisfactory">Satisfactory</option>
@@ -87,7 +94,6 @@
           </select>
 
           <label for="food">How was the food?</label>
-
           <select name="food" id="food">
             <option value="poor">Poor</option>
             <option value="satisfactory">Satisfactory</option>
@@ -97,12 +103,14 @@
           </select>
         </fieldset>
 
+        <!-- Comentarios adicionales y envío -->
         <label for="comments">Other Comments?</label>
         <textarea cols="30" rows="10" name="comments" id="comments"></textarea>
 
         <button type="submit">Submit</button>
       </form>
     </main> 
+
     <script src="script.js"></script>
   </body>
 </html>
